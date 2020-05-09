@@ -138,8 +138,8 @@ int main(int argc, char const *argv[])
 	char c_name[100];
 
 	extract_img_name(argv[1], img_name);
-	sprintf(h_name, "%s%s%s", argv[3], img_name, ".h");
-	sprintf(c_name, "%s%s%s", argv[3], img_name, ".c");
+	sprintf(h_name, "%s/%s%s", argv[3], img_name, ".h");
+	sprintf(c_name, "%s/%s%s", argv[3], img_name, ".c");
 
 	unsigned size = generated_c_file(c_name, img_name, argv[2]);
 	generate_header_file(h_name, img_name, size);

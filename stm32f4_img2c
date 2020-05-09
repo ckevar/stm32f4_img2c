@@ -1,4 +1,4 @@
 #!/bin/bash
 BMP_TMP_FILE=/tmp/stm32f4_im2c.bmp
 convert $1 -define bmp:subtype=RGB565 $BMP_TMP_FILE
-bin/stm32f4_bmp2c $1 $BMP_TMP_FILE $2/
+bin/stm32f4_bmp2c $1 $BMP_TMP_FILE $2

@@ -17,9 +17,18 @@ chmod +x stm32f4_img2c
 ```bash
 stm32f4_img2c input_image.JPG output/directory
 ```
+3. if you already have and image on BMP RGB565, call the bmp2c:
+```bash
+bin/stm32f4_bmp2c input_image.bmp input_image.bmp output/directory
+```
+Yes, the input image is twice
 
 ## 2. Compilation
-1. Type on terminal
+1. Create a new folder
+```bash
+mkdir bin
+```
+2. Compile
 ```bash
 make
 ```
