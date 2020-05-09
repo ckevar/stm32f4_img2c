@@ -109,7 +109,7 @@ unsigned generated_c_file(const char *c_name, const char *img_name, const char *
 			currentReadData += readData;
 			fprintf_bin_dimilitedBycommas(generated_file, buffer, readData);
 		}
-	} else if ((BMP_DIB.width + 1)*2 < 375) {
+	} else if ((BMP_DIB.width + 1)*2 < 1024) {
 		while(currentReadData < BMP_DIB.raw_size) {
 			size_t readData = fread(buffer, 1, (BMP_DIB.width + 1)*2, in_bin); // bit map file header
 			
