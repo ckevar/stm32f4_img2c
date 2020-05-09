@@ -40,7 +40,7 @@ void generate_header_file(const char *h_name, const char *img_name, unsigned siz
 	fprintf(generated_file, "%s\n", head_comments);
 	fprintf(generated_file, "%s _%s_H_\n", "#ifndef", img_name);
 	fprintf(generated_file, "%s _%s_H_\n\n", "#define", img_name);
-	fprintf(generated_file, "extern const uint8_t %s[%u];\n", img_name, size);
+	fprintf(generated_file, "extern const unsigned char %s[%u];\n", img_name, size);
 	fprintf(generated_file, "\n%s\n", "#endif");
 	fprintf(generated_file, "%s\n", tail_comments);
 	fclose(generated_file);
@@ -98,7 +98,7 @@ unsigned generated_c_file(const char *c_name, const char *img_name, const char *
 	}
 
 	fprintf(generated_file, "%s\n", head_comments);
-	fprintf(generated_file, "const uint8_t %s[%u] = {\n", img_name, BMP_FILE.file_size);
+	fprintf(generated_file, "const unsigned char %s[%u] = {\n", img_name, BMP_FILE.file_size);
 
 	fprintf_bin_dimilitedBycommas(generated_file, &BMP_FILE, BMP_FILE_HEADER_LEN);
 	fprintf_bin_dimilitedBycommas(generated_file, &BMP_DIB_REAL_LEN, BMP_DIB_HEADER_SIZE);
@@ -124,8 +124,7 @@ unsigned generated_c_file(const char *c_name, const char *img_name, const char *
 		fprintf(generated_file, "\n#error image incomplete due to large width\n");
 	}
 	fprintf(generated_file, "};\n");
-	fprintf(generated_file, "\n%s\n", "#endif");
-	fprintf(generated_file, "%s\n", tail_comments);
+	fprintf(generated_file, "\n%s\n", tail_comments);
 	fclose(generated_file);
 	fclose(in_bin);
 	return BMP_FILE.file_size;
