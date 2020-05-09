@@ -1,5 +1,7 @@
 # stm32f4_img2c
 Generates C and Header files from an image for displaying it on DM-LCD35RT module using standar library. This is an alternative for Embedded Resource Editor GUI by ST, that doesn't have support for Linux.
+## Bug Report
+1. ImageMagick sometimes doesn't conver the RGB888 to RGB565, so, I suggest to use this web page https://online-converting.com/image/convert2bmp to conver any image into RGB565, then use stm32f4_img2c to generate the c code
 ## Table of contents
 1. Getting Started
 2. Compilation
