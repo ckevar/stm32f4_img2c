@@ -11,7 +11,7 @@ Given the fact it uses ImageMagick, the input image can be in any format that Im
 1. Compile the sources
 3. Give executable attributes:
 ```bash
-sudo chmod +x stm32f4_img2c
+chmod +x stm32f4_img2c
 ```
 2. Generate the code from any image
 ```bash
@@ -30,4 +30,6 @@ make
 3. ImageMagick
 
 ## 4. References
+1. [BMP file format](https://en.wikipedia.org/wiki/BMP_file_format)
 1. [Embedded Resource Editor GUI](https://www.element14.com/community/thread/26813/l/stm32f4-loading-image?displayFullThread=true)
+
