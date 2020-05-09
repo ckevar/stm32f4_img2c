@@ -39,6 +39,7 @@ make
 3. ImageMagick
 
 ## 4. References
+1. [Unofficial Documentation ](https://github.com/ckevar/stm32f4_img2c/wiki/IMAGE-ON-THE-LCD35RT,-USING-STM32F4-Discovery)
 1. [BMP file format](https://en.wikipedia.org/wiki/BMP_file_format)
 1. [Embedded Resource Editor GUI](https://www.element14.com/community/thread/26813/l/stm32f4-loading-image?displayFullThread=true)
 
